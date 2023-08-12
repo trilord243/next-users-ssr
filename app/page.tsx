@@ -1,3 +1,4 @@
+import User from "@/components/User";
 import React from "react";
 
 async function fetchUsers() {
@@ -13,7 +14,9 @@ async function IndexPage() {
   return (
     <>
       <h1>Users</h1>
-      {JSON.stringify(users)}
+      {users.map((user: any) => (
+        <User key={user.id} user={user} />
+      ))}
     </>
   );
 }
