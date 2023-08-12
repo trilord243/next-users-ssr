@@ -13,7 +13,6 @@ async function IndexPage() {
   console.log(users);
   return (
     <>
-      <h1>Users</h1>
       {users.map((user: any) => (
         <User key={user.id} user={user} />
       ))}
